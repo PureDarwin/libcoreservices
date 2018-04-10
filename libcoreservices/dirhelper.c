@@ -41,6 +41,9 @@
 #include <libkern/OSByteOrder.h>
 #include <TargetConditionals.h>
 #include <xpc/xpc.h>
+#if __has_include(<xpc/private.h>)
+#include <xpc/private.h>
+#endif
 #if !TARGET_OS_IPHONE
 #include <CrashReporterClient.h>
 #endif /* !TARGET_OS_IPHONE */
@@ -48,10 +51,12 @@
 #include "dirhelper.h"
 #include "dirhelper_priv.h"
 
+#if !__has_include(<xpc/private.h>)
 static int _xpc_runtime_is_app_sandboxed(void) {
 	// TODO: Remove this function once libxpc is implemented.
 	return 0;
 }
+#endif
 
 #define BUCKETLEN	2
 
@@ -389,12 +394,14 @@ _dirhelper(dirhelper_which_t which, char *path, size_t pathlen)
          * sandboxed applications get per-application directories named
          * after the container
          */
+#if defined(XPC_ENV_SANDBOX_CONTAINER_ID)
         userdir_suffix = getenv(XPC_ENV_SANDBOX_CONTAINER_ID);
         if (!userdir_suffix) {
             setcrashlogmessage("XPC_ENV_SANDBOX_CONTAINER_ID not set");
             errno = EINVAL;
             return NULL;
         }
+#endif
     } else if (!dyld_process_is_restricted()) {
         userdir_suffix = getenv(DIRHELPER_ENV_USER_DIR_SUFFIX);
     }
