@@ -32,13 +32,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F7EDEDB207D319C0085D9FF = {
+		1F5067E5207D5454006077D6 /* libcoreservices */ = {
 			isa = PBXGroup;
 			children = (
 				1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */,
 				1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */,
 				1F7EDEEB207D31C60085D9FF /* sysdir.c */,
 				1F7EDEEE207D31C70085D9FF /* sysdir.h */,
+			);
+			path = libcoreservices;
+			sourceTree = "<group>";
+		};
+		1F7EDEDB207D319C0085D9FF = {
+			isa = PBXGroup;
+			children = (
+				1F5067E5207D5454006077D6 /* libcoreservices */,
 				1F7EDEE7207D31C00085D9FF /* Products */,
 			);
 			sourceTree = "<group>";
