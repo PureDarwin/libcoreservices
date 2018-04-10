@@ -150,12 +150,14 @@
 		1F7EDEE0207D319C0085D9FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SYSTEM_HEADER_SEARCH_PATHS = SDK;
 			};
 			name = Debug;
 		};
 		1F7EDEE1207D319C0085D9FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SYSTEM_HEADER_SEARCH_PATHS = SDK;
 			};
 			name = Release;
 		};

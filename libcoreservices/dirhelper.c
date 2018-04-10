@@ -41,13 +41,17 @@
 #include <libkern/OSByteOrder.h>
 #include <TargetConditionals.h>
 #include <xpc/xpc.h>
-#include <xpc/private.h>
 #if !TARGET_OS_IPHONE
 #include <CrashReporterClient.h>
 #endif /* !TARGET_OS_IPHONE */
 
 #include "dirhelper.h"
 #include "dirhelper_priv.h"
+
+static int _xpc_runtime_is_app_sandboxed(void) {
+	// TODO: Remove this function once libxpc is implemented.
+	return 0;
+}
 
 #define BUCKETLEN	2
 
