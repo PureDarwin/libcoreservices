@@ -10,6 +10,8 @@
 		1F5067E9207D555D006077D6 /* dirhelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067E6207D555C006077D6 /* dirhelper.c */; };
 		1F5067EA207D555D006077D6 /* dirhelper.defs in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067E7207D555C006077D6 /* dirhelper.defs */; };
 		1F5067EB207D555D006077D6 /* dirhelper_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5067E8207D555D006077D6 /* dirhelper_priv.h */; };
+		1F5067F1207D5673006077D6 /* CrashReporterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5067ED207D5606006077D6 /* CrashReporterClient.h */; };
+		1F5067F2207D5673006077D6 /* CrashReporterClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067EE207D5606006077D6 /* CrashReporterClient.c */; };
 		1F7EDEEF207D31C70085D9FF /* sysdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EDEEB207D31C60085D9FF /* sysdir.c */; };
 		1F7EDEF0207D31C70085D9FF /* NSSystemDirectories.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */; };
 		1F7EDEF1207D31C70085D9FF /* NSSystemDirectories.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,6 +22,8 @@
 		1F5067E6207D555C006077D6 /* dirhelper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dirhelper.c; sourceTree = "<group>"; };
 		1F5067E7207D555C006077D6 /* dirhelper.defs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.mig; path = dirhelper.defs; sourceTree = "<group>"; };
 		1F5067E8207D555D006077D6 /* dirhelper_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dirhelper_priv.h; sourceTree = "<group>"; };
+		1F5067ED207D5606006077D6 /* CrashReporterClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashReporterClient.h; sourceTree = "<group>"; };
+		1F5067EE207D5606006077D6 /* CrashReporterClient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CrashReporterClient.c; sourceTree = "<group>"; };
 		1F7EDEE6207D31C00085D9FF /* libsystem_coreservices.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libsystem_coreservices.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7EDEEB207D31C60085D9FF /* sysdir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sysdir.c; sourceTree = "<group>"; };
 		1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NSSystemDirectories.c; sourceTree = "<group>"; };
@@ -52,9 +56,19 @@
 			path = libcoreservices;
 			sourceTree = "<group>";
 		};
+		1F5067EC207D55FA006077D6 /* CrashReporterClient */ = {
+			isa = PBXGroup;
+			children = (
+				1F5067ED207D5606006077D6 /* CrashReporterClient.h */,
+				1F5067EE207D5606006077D6 /* CrashReporterClient.c */,
+			);
+			path = CrashReporterClient;
+			sourceTree = "<group>";
+		};
 		1F7EDEDB207D319C0085D9FF = {
 			isa = PBXGroup;
 			children = (
+				1F5067EC207D55FA006077D6 /* CrashReporterClient */,
 				1F5067E5207D5454006077D6 /* libcoreservices */,
 				1F7EDEE7207D31C00085D9FF /* Products */,
 			);
@@ -77,6 +91,7 @@
 			files = (
 				1F5067EB207D555D006077D6 /* dirhelper_priv.h in Headers */,
 				1F7EDEF2207D31C70085D9FF /* sysdir.h in Headers */,
+				1F5067F1207D5673006077D6 /* CrashReporterClient.h in Headers */,
 				1F7EDEF1207D31C70085D9FF /* NSSystemDirectories.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,7 @@
 			files = (
 				1F5067E9207D555D006077D6 /* dirhelper.c in Sources */,
 				1F5067EA207D555D006077D6 /* dirhelper.defs in Sources */,
+				1F5067F2207D5673006077D6 /* CrashReporterClient.c in Sources */,
 				1F7EDEEF207D31C70085D9FF /* sysdir.c in Sources */,
 				1F7EDEF0207D31C70085D9FF /* NSSystemDirectories.c in Sources */,
 			);
