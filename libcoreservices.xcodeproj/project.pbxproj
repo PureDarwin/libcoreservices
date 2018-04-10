@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F5067E9207D555D006077D6 /* dirhelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067E6207D555C006077D6 /* dirhelper.c */; };
+		1F5067E9207D555D006077D6 /* dirhelper_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067E6207D555C006077D6 /* dirhelper_client.c */; };
 		1F5067EA207D555D006077D6 /* dirhelper.defs in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067E7207D555C006077D6 /* dirhelper.defs */; };
 		1F5067EB207D555D006077D6 /* dirhelper_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5067E8207D555D006077D6 /* dirhelper_priv.h */; };
 		1F5067F1207D5673006077D6 /* CrashReporterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5067ED207D5606006077D6 /* CrashReporterClient.h */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F5067E6207D555C006077D6 /* dirhelper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dirhelper.c; sourceTree = "<group>"; };
+		1F5067E6207D555C006077D6 /* dirhelper_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dirhelper_client.c; sourceTree = "<group>"; };
 		1F5067E7207D555C006077D6 /* dirhelper.defs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.mig; path = dirhelper.defs; sourceTree = "<group>"; };
 		1F5067E8207D555D006077D6 /* dirhelper_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dirhelper_priv.h; sourceTree = "<group>"; };
 		1F5067ED207D5606006077D6 /* CrashReporterClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashReporterClient.h; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				1F5067E8207D555D006077D6 /* dirhelper_priv.h */,
-				1F5067E6207D555C006077D6 /* dirhelper.c */,
+				1F5067E6207D555C006077D6 /* dirhelper_client.c */,
 				1F5067E7207D555C006077D6 /* dirhelper.defs */,
 				1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */,
 				1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */,
@@ -152,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5067E9207D555D006077D6 /* dirhelper.c in Sources */,
+				1F5067E9207D555D006077D6 /* dirhelper_client.c in Sources */,
 				1F5067EA207D555D006077D6 /* dirhelper.defs in Sources */,
 				1F5067F2207D5673006077D6 /* CrashReporterClient.c in Sources */,
 				1F7EDEEF207D31C70085D9FF /* sysdir.c in Sources */,
