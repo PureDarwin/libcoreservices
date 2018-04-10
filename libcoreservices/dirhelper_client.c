@@ -264,9 +264,7 @@ _dirhelper_fork_child(void)
 	if(userdir) *userdir = 0;
 }
 
-__private_extern__ char *_dirhelper(dirhelper_which_t which, char *path, size_t pathlen);
-__private_extern__ char *
-_dirhelper(dirhelper_which_t which, char *path, size_t pathlen)
+char *_dirhelper(dirhelper_which_t which, char *path, size_t pathlen)
 {
 	static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 	struct stat sb;
