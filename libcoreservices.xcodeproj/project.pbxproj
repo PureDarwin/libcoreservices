@@ -245,6 +245,9 @@
 					"-lsystem_kernel",
 					"-lsystem_platform",
 					"-lsystem_pthread",
+					"-lsystem_malloc",
+					"-lsystem_info",
+					"-llaunch",
 					"-umbrella",
 					System,
 				);
@@ -315,6 +318,9 @@
 					"-lsystem_kernel",
 					"-lsystem_platform",
 					"-lsystem_pthread",
+					"-lsystem_malloc",
+					"-lsystem_info",
+					"-llaunch",
 					"-umbrella",
 					System,
 				);
