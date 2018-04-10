@@ -257,9 +257,7 @@ static void userdir_allocate(void)
  * There is a rare case when launchd will have userdir set, and child process
  * will sometimes inherit this cached value.
  */
-__private_extern__ void _dirhelper_fork_child(void);
-__private_extern__ void
-_dirhelper_fork_child(void)
+void _libcoreservices_fork_child(void)
 {
 	if(userdir) *userdir = 0;
 }
