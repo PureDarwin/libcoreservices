@@ -100,7 +100,7 @@ encode_uuid_uid(const uuid_t uuid, uid_t uid, char *str)
     unsigned char buf[UUID_UID_SIZE + 1];
     unsigned char *bp = buf;
     int i;
-    unsigned int n;
+    unsigned int n = 0;
 
     memcpy(bp, uuid, sizeof(uuid_t));
     uid = OSSwapHostToBigInt32(uid);
@@ -145,8 +145,8 @@ encode_uuid_uid(const uuid_t uuid, uid_t uid, char *str)
     *str = 0;
 }
 
-static void
-_setcrashlogmessage(const char *fmt, ...) __attribute__((__format__(__printf__,1,2)))
+static void __attribute__((__format__(__printf__,1,2)))
+_setcrashlogmessage(const char *fmt, ...)
 {
     char *mess = NULL;
     int res;
