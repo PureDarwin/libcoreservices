@@ -1,0 +1,11 @@
+Sources Used:
+=============
+
+  - `NSSystemDirectories.c': Taken from Apple's Libc project (version
+                             997.90.3 - released as part of OS X 10.9.5)
+  - `NSSystemDirectories.h': Taken from Apple's Libc project (version
+                             997.90.3 - released as part of OS X 10.9.5)
+  - `sysdir.c':              Written by author
+  - `sysdir.h':              Copied from the macOS SDK in Xcode 9.2
+                             (build 9C40b).
+
