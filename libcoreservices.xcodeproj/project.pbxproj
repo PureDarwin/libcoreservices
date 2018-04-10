@@ -16,11 +16,26 @@
 		1F7A64B5207D781B00C0DB7D /* CrashReporterClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067EE207D5606006077D6 /* CrashReporterClient.c */; };
 		1F7A64B6207D781B00C0DB7D /* dirhelper.defs in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067E7207D555C006077D6 /* dirhelper.defs */; settings = {ATTRIBUTES = (Server, ); }; };
 		1F7A64B9207D7F1F00C0DB7D /* libbsm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7A64B8207D7F1F00C0DB7D /* libbsm.tbd */; };
+		1F7A64BD207D805B00C0DB7D /* com.apple.bsd.dirhelper.plist in Install launchd.plist */ = {isa = PBXBuildFile; fileRef = 1F7A64BA207D800600C0DB7D /* com.apple.bsd.dirhelper.plist */; };
 		1F7EDEEF207D31C70085D9FF /* sysdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EDEEB207D31C60085D9FF /* sysdir.c */; };
 		1F7EDEF0207D31C70085D9FF /* NSSystemDirectories.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */; };
 		1F7EDEF1207D31C70085D9FF /* NSSystemDirectories.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7EDEF2207D31C70085D9FF /* sysdir.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EDEEE207D31C70085D9FF /* sysdir.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F7A64BC207D804D00C0DB7D /* Install launchd.plist */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /System/Library/LaunchDaemons;
+			dstSubfolderSpec = 0;
+			files = (
+				1F7A64BD207D805B00C0DB7D /* com.apple.bsd.dirhelper.plist in Install launchd.plist */,
+			);
+			name = "Install launchd.plist";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F5067E6207D555C006077D6 /* dirhelper_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dirhelper_client.c; sourceTree = "<group>"; };
@@ -31,6 +46,7 @@
 		1F7A64AE207D780300C0DB7D /* dirhelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dirhelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7A64B0207D780300C0DB7D /* dirhelper_tool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dirhelper_tool.c; sourceTree = "<group>"; };
 		1F7A64B8207D7F1F00C0DB7D /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
+		1F7A64BA207D800600C0DB7D /* com.apple.bsd.dirhelper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.apple.bsd.dirhelper.plist; sourceTree = "<group>"; };
 		1F7EDEE6207D31C00085D9FF /* libsystem_coreservices.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libsystem_coreservices.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7EDEEB207D31C60085D9FF /* sysdir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sysdir.c; sourceTree = "<group>"; };
 		1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NSSystemDirectories.c; sourceTree = "<group>"; };
@@ -84,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1F7A64B0207D780300C0DB7D /* dirhelper_tool.c */,
+				1F7A64BA207D800600C0DB7D /* com.apple.bsd.dirhelper.plist */,
 			);
 			path = dirhelper;
 			sourceTree = "<group>";
@@ -139,6 +156,7 @@
 			buildPhases = (
 				1F7A64AA207D780300C0DB7D /* Sources */,
 				1F7A64AB207D780300C0DB7D /* Frameworks */,
+				1F7A64BC207D804D00C0DB7D /* Install launchd.plist */,
 			);
 			buildRules = (
 			);
