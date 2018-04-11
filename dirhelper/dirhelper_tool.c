@@ -39,13 +39,14 @@ kern_return_t do___dirhelper_create_user_local(mach_port_t server_port, audit_to
 		__user_local_mkdir_p(real_path);
 		chown(real_path, uid, gid);
 		chmod(real_path, 0755);
+
+		free(path);
 	} else {
 		// TODO: Use os_log() here.
 		fprintf(stderr, "*** __user_local_dirname() failed: %s\n", strerror(errno));
 		kr = KERN_FAILURE;
 	}
 
-	free(path);
 	vproc_transaction_end(NULL, transaction);
 	return kr;
 }
