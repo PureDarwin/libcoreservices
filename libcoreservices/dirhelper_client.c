@@ -45,7 +45,7 @@
 #include <xpc/private.h>
 #endif
 #if !TARGET_OS_IPHONE
-#include <CrashReporterClient.h>
+#include "CrashReporterClient.h"
 #endif /* !TARGET_OS_IPHONE */
 
 #include "dirhelper.h"
@@ -145,23 +145,6 @@ encode_uuid_uid(const uuid_t uuid, uid_t uid, char *str)
 	*str = 0;
 }
 
-static void __attribute__((__format__(__printf__,1,2)))
-_setcrashlogmessage(const char *fmt, ...)
-{
-	char *mess = NULL;
-	int res;
-	va_list ap;
-
-	va_start(ap, fmt);
-	res = vasprintf(&mess, fmt, ap);
-	va_end(ap);
-	if (res < 0)
-		mess = (char *)fmt; /* the format string is better than nothing */
-	CRSetCrashLogMessage(mess);
-}
-
-#define setcrashlogmessage(fmt, ...) _setcrashlogmessage("%s: %u: " fmt, __func__, __LINE__, ##__VA_ARGS__)
-
 #endif /* !TARGET_OS_IPHONE */
 
 char *
@@ -224,25 +207,6 @@ __user_local_dirname(uid_t uid, dirhelper_which_t which, char *path, size_t path
 		setcrashlogmessage("snprintf: buffer too small: res=%d >= pathlen=%zu", res, pathlen);
 		errno = EINVAL;
 		return NULL; /* buffer too small */
-	}
-	return path;
-}
-
-char *
-__user_local_mkdir_p(char *path)
-{
-	char *next;
-	int res;
-
-	next = path + strlen(VAR_FOLDERS_PATH);
-	while ((next = strchr(next, '/')) != NULL) {
-		*next = 0; // temporarily truncate
-		res = mkdir(path, 0755);
-		if (res != 0 && errno != EEXIST) {
-			setcrashlogmessage("mkdir: path=%s mode=0755: %s", path, strerror(errno));
-			return NULL;
-		}
-		*next++ = '/'; // restore the slash and increment
 	}
 	return path;
 }

@@ -38,6 +38,8 @@
 		1F84AC9D2193AEEF00A141C6 /* CrashReporterClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067EE207D5606006077D6 /* CrashReporterClient.c */; };
 		1F84AC9E2193AEF900A141C6 /* libCrashReporterClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */; };
 		1F84AC9F2193AEFD00A141C6 /* libCrashReporterClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */; };
+		1FEA338E2193AF7800A678A8 /* dirhelper_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA338D2193AF7800A678A8 /* dirhelper_utils.c */; };
+		1FEA338F2193AF7800A678A8 /* dirhelper_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA338D2193AF7800A678A8 /* dirhelper_utils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,7 @@
 		1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSystemDirectories.h; sourceTree = "<group>"; };
 		1F7EDEEE207D31C70085D9FF /* sysdir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdir.h; sourceTree = "<group>"; };
 		1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCrashReporterClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FEA338D2193AF7800A678A8 /* dirhelper_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dirhelper_utils.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,7 @@
 			children = (
 				1F5067E8207D555D006077D6 /* dirhelper_priv.h */,
 				1F5067E6207D555C006077D6 /* dirhelper_client.c */,
+				1FEA338D2193AF7800A678A8 /* dirhelper_utils.c */,
 				1F5067E7207D555C006077D6 /* dirhelper.defs */,
 				1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */,
 				1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */,
@@ -315,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEA338F2193AF7800A678A8 /* dirhelper_utils.c in Sources */,
 				1F7A64B6207D781B00C0DB7D /* dirhelper.defs in Sources */,
 				1F7A64B1207D780300C0DB7D /* dirhelper_tool.c in Sources */,
 			);
@@ -328,6 +333,7 @@
 				1F5067EA207D555D006077D6 /* dirhelper.defs in Sources */,
 				1F7EDEEF207D31C70085D9FF /* sysdir.c in Sources */,
 				1F7EDEF0207D31C70085D9FF /* NSSystemDirectories.c in Sources */,
+				1FEA338E2193AF7800A678A8 /* dirhelper_utils.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

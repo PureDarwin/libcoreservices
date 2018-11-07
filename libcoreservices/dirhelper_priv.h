@@ -46,6 +46,11 @@ __BEGIN_DECLS
 char *__user_local_dirname(uid_t uid, dirhelper_which_t which, char *path,
 	size_t pathlen);
 char *__user_local_mkdir_p(char *path);
+
+__attribute__((visibility("hidden"), __format__(__printf__,1,2)))
+void _setcrashlogmessage(const char *fmt, ...);
+#define setcrashlogmessage(fmt, ...) _setcrashlogmessage("%s: %u: " fmt, __func__, __LINE__, ##__VA_ARGS__)
+
 __END_DECLS
 
 #endif /* _DIRHELPER_PRIV_H_ */
