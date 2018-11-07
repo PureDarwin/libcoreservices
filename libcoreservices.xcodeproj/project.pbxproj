@@ -102,6 +102,7 @@
 		1F7EDEEE207D31C70085D9FF /* sysdir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdir.h; sourceTree = "<group>"; };
 		1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCrashReporterClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEA338D2193AF7800A678A8 /* dirhelper_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dirhelper_utils.c; sourceTree = "<group>"; };
+		1FFDCD90213F430200899E29 /* libCrashReporterClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCrashReporterClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +181,8 @@
 				1F5067EC207D55FA006077D6 /* CrashReporterClient */,
 				1F5067E5207D5454006077D6 /* libcoreservices */,
 				1F7A64AF207D780300C0DB7D /* dirhelper */,
-				1F7EDEE7207D31C00085D9FF /* Products */,
 				1F7A64B7207D7F1F00C0DB7D /* Frameworks */,
+				1F7EDEE7207D31C00085D9FF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +192,7 @@
 				1F7EDEE6207D31C00085D9FF /* libsystem_coreservices.dylib */,
 				1F7A64AE207D780300C0DB7D /* dirhelper */,
 				1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */,
+				1FFDCD90213F430200899E29 /* libCrashReporterClient.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
