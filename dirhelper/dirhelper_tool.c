@@ -8,15 +8,7 @@
 #include <bsm/libbsm.h>
 #include "../libcoreservices/dirhelper_priv.h"
 #include "dirhelperServer.h"
-
-// We cannot use xpc_transaction_begin/end here, because libxpc is not yet implemented
-// on PureDarwin. At the same time, the definitions in Apple's <vproc.h> are deprecated.
-// So, we redeclare them here.
-#pragma mark Transaction Support
-typedef struct vproc_s *vproc_t;
-typedef struct vproc_transaction_s *vproc_transaction_t;
-extern vproc_transaction_t vproc_transaction_begin(vproc_t proc);
-extern void vproc_transaction_end(vproc_t proc, vproc_transaction_t transaction);
+#include <xpc/xpc.h>
 
 #pragma mark libSystem Imports
 
@@ -27,7 +19,7 @@ extern char * __user_local_mkdir_p(char *path);
 
 kern_return_t do___dirhelper_create_user_local(mach_port_t server_port, audit_token_t remote_creds)
 {
-	vproc_transaction_t transaction = vproc_transaction_begin(NULL);
+	xpc_transaction_begin();
 	kern_return_t kr = KERN_SUCCESS;
 
 	uid_t uid = audit_token_to_ruid(remote_creds);
@@ -47,13 +39,13 @@ kern_return_t do___dirhelper_create_user_local(mach_port_t server_port, audit_to
 		kr = KERN_FAILURE;
 	}
 
-	vproc_transaction_end(NULL, transaction);
+	xpc_transaction_end();
 	return kr;
 }
 
 kern_return_t do___dirhelper_idle_exit(mach_port_t server_port, audit_token_t remote_creds)
 {
-	// I don't know what this is supposed to do. We use vproc transactions and EnablePressuredExit instead anyway.
+	// I don't know what this is supposed to do. We use XPC transactions and EnablePressuredExit instead anyway.
 	return KERN_SUCCESS;
 }
 
