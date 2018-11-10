@@ -57,6 +57,20 @@
 			remoteGlobalIDString = 1F7A64AD207D780300C0DB7D;
 			remoteInfo = dirhelper;
 		};
+		1FD681AF21977AE100943512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F7EDEDC207D319C0085D9FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F84AC972193AEE900A141C6;
+			remoteInfo = CrashReporterClient;
+		};
+		1FD681B121977AE700943512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F7EDEDC207D319C0085D9FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F84AC972193AEE900A141C6;
+			remoteInfo = CrashReporterClient;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -233,6 +247,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1FD681B221977AE700943512 /* PBXTargetDependency */,
 			);
 			name = dirhelper;
 			productName = dirhelper;
@@ -250,6 +265,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1FD681B021977AE100943512 /* PBXTargetDependency */,
 			);
 			name = system_coreservices;
 			productName = system_coreservices;
@@ -359,6 +375,16 @@
 			isa = PBXTargetDependency;
 			target = 1F7A64AD207D780300C0DB7D /* dirhelper */;
 			targetProxy = 1F9E7565207D82CE00279854 /* PBXContainerItemProxy */;
+		};
+		1FD681B021977AE100943512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F84AC972193AEE900A141C6 /* CrashReporterClient */;
+			targetProxy = 1FD681AF21977AE100943512 /* PBXContainerItemProxy */;
+		};
+		1FD681B221977AE700943512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F84AC972193AEE900A141C6 /* CrashReporterClient */;
+			targetProxy = 1FD681B121977AE700943512 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
