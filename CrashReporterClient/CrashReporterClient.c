@@ -1,8 +1,5 @@
 #include "CrashReporterClient.h"
 
-char *__crashreporter_info__;
-asm(".desc __crashreporter_info__, 0x10");
-
 __attribute__((section("__DATA," CRASHREPORTER_ANNOTATIONS_SECTION)))
 struct crashreporter_annotations_t gCRAnnotations = {
 	.version = CRASHREPORTER_ANNOTATIONS_VERSION,
