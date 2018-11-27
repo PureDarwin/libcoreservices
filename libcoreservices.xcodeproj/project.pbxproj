@@ -638,6 +638,7 @@
 					"-lsystem_malloc",
 					"-lsystem_info",
 					"-llaunch",
+					"-lxpc",
 					"-umbrella",
 					System,
 				);
@@ -710,6 +711,7 @@
 					"-lsystem_malloc",
 					"-lsystem_info",
 					"-llaunch",
+					"-lxpc",
 					"-umbrella",
 					System,
 				);

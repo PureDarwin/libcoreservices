@@ -52,10 +52,7 @@
 #include "dirhelper_priv.h"
 
 #if !__has_include(<xpc/private.h>)
-static int _xpc_runtime_is_app_sandboxed(void) {
-	// TODO: Remove this function once libxpc is implemented.
-	return 0;
-}
+extern int _xpc_runtime_is_app_sandboxed(void);
 #endif
 
 #define BUCKETLEN	2
