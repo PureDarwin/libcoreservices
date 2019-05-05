@@ -759,7 +759,6 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -793,7 +792,6 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
