@@ -34,7 +34,7 @@
 		1F7EDEF0207D31C70085D9FF /* NSSystemDirectories.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EDEEC207D31C60085D9FF /* NSSystemDirectories.c */; };
 		1F7EDEF1207D31C70085D9FF /* NSSystemDirectories.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EDEED207D31C70085D9FF /* NSSystemDirectories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7EDEF2207D31C70085D9FF /* sysdir.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7EDEEE207D31C70085D9FF /* sysdir.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F84AC9C2193AEEF00A141C6 /* CrashReporterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5067ED207D5606006077D6 /* CrashReporterClient.h */; };
+		1F84AC9C2193AEEF00A141C6 /* CrashReporterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5067ED207D5606006077D6 /* CrashReporterClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F84AC9D2193AEEF00A141C6 /* CrashReporterClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5067EE207D5606006077D6 /* CrashReporterClient.c */; };
 		1F84AC9E2193AEF900A141C6 /* libCrashReporterClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */; };
 		1F84AC9F2193AEFD00A141C6 /* libCrashReporterClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F84AC982193AEE900A141C6 /* libCrashReporterClient.a */; };
