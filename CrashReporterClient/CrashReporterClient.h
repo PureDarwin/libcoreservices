@@ -39,6 +39,8 @@
 #define _crc_make_setter(attr, arg) (gCRAnnotations.attr = (uint64_t)(unsigned long)(arg))
 #define CRGetCrashLogMessage() _crc_make_getter(message)
 #define CRSetCrashLogMessage(m) _crc_make_setter(message, m)
+#define CRGetCrashLogMessage2() _crc_make_getter(message2)
+#define CRSetCrashLogMessage2(m) _crc_make_setter(message2, m)
 
 struct crashreporter_annotations_t {
 	uint64_t version;
